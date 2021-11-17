@@ -18,10 +18,10 @@ class Films extends Migration
             $table->string('name');
             $table->date('release_date');
             $table->string('writers');
-            $table->string('audience');
+            $table->string('audience')->nullable();
             $table->string('length');
             $table->string('cover');
-            $table->string('trailer');
+            $table->string('trailer')->nullable();
             $table->string('description');
             $table->string('categories');
             $table->timestamps();

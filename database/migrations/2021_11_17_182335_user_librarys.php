@@ -16,7 +16,7 @@ class UserLibrarys extends Migration
         Schema::create('user_librarys', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->unique();
-            $table->string('films');
+            $table->string('films')->nullable();
             $table->timestamps();
             
             $table->index("user_id");
