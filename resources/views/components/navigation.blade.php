@@ -3,12 +3,12 @@
         <div class = 'flex p-4 justify-between'>
             <ul class = 'flex justify-center items-center'>
                 <li class = 'items-center'>
-                    <a href="index.php">
+                    <a href="{{ url('/') }}">
                         <img src="{{ asset('img/LOGO.png') }}" width = '180px'>
                     </a>
                 </li>
                 <li class = 'px-10 items-center'>
-                    <a href="index.php" class = 'text-white'>Browse</a>
+                    <a href="{{ url('/') }}" class = 'text-white'>Browse</a>
                 </li>
             </ul>
             <ul class = 'flex justify-center items-center'>
@@ -18,9 +18,9 @@
                 </li>
                     @if ($loggedIn)
                     <!-- Navigation of signed in user -->
-                   <li class = 'px-5 items-center text-gray-400'><a href="index.php">My Library</a></li>
+                   <li class = 'px-5 items-center text-gray-400'><a href="{{ url('/library') }}">My Library</a></li>
                     <!-- Profile icon leading to profile -->
-                    <li class = 'px-5 items-center'><a href="index.php"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'w-16 rounded-full'></a></li>
+                    <li class = 'px-5 items-center'><a href="{{ url('/profile/') }}"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'w-16 rounded-full'></a></li>
                     @else
                     <!-- Navigation of logged out user -->
                     <li class = 'px-5 items-center'><a href="{{ url('/registration/') }}" class = 'text-gray-400'>Sign In</a></li>
