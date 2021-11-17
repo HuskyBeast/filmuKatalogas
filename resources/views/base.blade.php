@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <x-navigation loggedIn="1"></x-navigation>
+    <x-navigation loggedIn="0"></x-navigation>
     @yield('content')
     <x-footer></x-footer>
 </body>

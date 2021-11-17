@@ -23,7 +23,7 @@
                     <li class = 'px-5 items-center'><a href="index.php"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'w-16 rounded-full'></a></li>
                     @else
                     <!-- Navigation of logged out user -->
-                    <li class = 'px-5 items-center'><a href="index.php" class = 'text-gray-400'>Sign In</a></li>
+                    <li class = 'px-5 items-center'><a href="{{ url('/registration/') }}" class = 'text-gray-400'>Sign In</a></li>
                     @endif
             </ul>
         </div>
