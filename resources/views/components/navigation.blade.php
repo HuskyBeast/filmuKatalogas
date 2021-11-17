@@ -1,5 +1,5 @@
 <div class = 'w-full'>
-    <nav class = 'px-60 bg-blue-900 shadow-lg'>
+    <nav class = 'bg-blue-900 shadow-lg'>
         <div class = 'flex p-4 justify-between'>
             <ul class = 'flex justify-center items-center'>
                 <li class = 'items-center'>
@@ -20,11 +20,10 @@
                     <!-- Navigation of signed in user -->
                    <li class = 'px-5 items-center text-gray-400'><a href="index.php">My Library</a></li>
                     <!-- Profile icon leading to profile -->
-                    <li class = 'px-5 items-center'><a href="index.php"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'rounded-full' width = '50px'></a></li>
+                    <li class = 'px-5 items-center'><a href="index.php"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'w-16 rounded-full'></a></li>
                     @else
                     <!-- Navigation of logged out user -->
-                    <li class = 'px-5 items-center'><a href="index.php" class = 'text-gray-400'>Sign Up</a></li>
-                    <li class = 'items-center'><a href="index.php" class = 'text-gray-400'>Sign In</a></li>
+                    <li class = 'px-5 items-center'><a href="index.php" class = 'text-gray-400'>Sign In</a></li>
                     @endif
             </ul>
         </div>
