@@ -16,6 +16,9 @@ class Film extends Model
         'name',
         'description',
         'cover',
+        'writers',
+        'audience',
+        'length',
         'trailer',
         'release_date',
         'categories'

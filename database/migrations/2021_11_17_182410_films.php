@@ -17,6 +17,9 @@ class Films extends Migration
             $table->id();
             $table->string('name');
             $table->date('release_date');
+            $table->string('writers');
+            $table->string('audience');
+            $table->string('length');
             $table->string('cover');
             $table->string('trailer');
             $table->string('description');
