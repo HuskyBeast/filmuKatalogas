@@ -6,15 +6,13 @@ use Illuminate\View\Component;
 
 class Navigation extends Component
 {
-    public $loggedIn;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($loggedIn)
+    public function __construct()
     {
-        $this->loggedIn = $loggedIn;
     }
 
     /**

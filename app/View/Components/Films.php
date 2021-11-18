@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class Films extends Component
 {
+    public $films;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($films, $categories)
     {
-        //
+        $this->films = $films;
     }
 
     /**
