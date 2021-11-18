@@ -14,7 +14,7 @@
             
         </div>
     </div>
-    <div class = 'xl:flex-2 lg:flex-1 md:flex-none lg:order-none md:order-first'>
+    <div class = 'lg:flex-1 md:flex-none lg:order-none md:order-first'>
     <!-- Film categories component goes here -->
     {{ $categories }}
     <!-- Film categories component goes here -->
