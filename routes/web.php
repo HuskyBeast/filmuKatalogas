@@ -28,9 +28,10 @@ Route::post('/login/', [LoginController::class, 'login'])->name('login');
 Route::get('/logout/', [LoginController::class, "logout"])->name("logout");
 Route::get('/profile', function () {
     return view('profile');
-});
+})->name('profile')->middleware('user');
 
 Route::get('/profile/library/', function () {
     return view('profile');
-})->name('profile')->middleware('user');
+})->name('library')->middleware('user');
 
+Route::get('/category/{id}', [PageLoader::class, 'category']);

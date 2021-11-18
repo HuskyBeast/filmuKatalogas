@@ -8,7 +8,7 @@
         <h3 class = 'font-bold uppercase'>Categories</h3>
         <hr class = 'my-2'>
         @foreach ($categories as $category)
-            <a class="category p-2 m-2" href="#">{{ $category->name }}</a>
+            <a class="category p-2 m-2" href='{{ url("/category/$category->id") }}'>{{ $category->name }}</a>
         @endforeach
     </div>
 </div>
