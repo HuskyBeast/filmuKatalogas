@@ -22,10 +22,15 @@ Route::get('/registration', function () {
     return view('registration');
 })->name('registration');
 
+Route::get('/films', function () {
+    return view('filmsList');
+});
+
 Route::post('/register/', [RegisterController::class, 'register'])->name('register');
 Route::post('/login/', [LoginController::class, 'login'])->name('login');
 
 Route::get('/logout/', [LoginController::class, "logout"])->name("logout");
+
 Route::get('/profile', function () {
     return view('profile');
 })->name('profile')->middleware('user');
