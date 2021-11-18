@@ -6,69 +6,41 @@
         <div class = 'my-10'>
             <h3 class = 'my-2 text-lg font-bold'>Trending This Week</h3>
             <div class='filmGrid grid grid-cols-4 gap-3'>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
+                @foreach ($films as $film)
+                    <div>
+                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <div class = 'my-10'>
             <h3 class = 'my-2 text-lg font-bold'>Most Popular Films</h3>
             <div class="filmGrid grid grid-cols-4 gap-3">
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
+                @foreach ($films as $film)
+                    <div>
+                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <div class = 'my-10'>
             <h3 class = 'my-2 text-lg font-bold'>Top Rated Films</h3>
             <div class="filmGrid grid grid-cols-4 gap-3">
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
+                @foreach ($films as $film)
+                    <div>
+                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                    </div>
+                @endforeach
             </div>
         </div>
         <div class = 'my-10'>
             <h3 class = 'my-2 text-lg font-bold'>Top Upcoming Films</h3>
             <div class="filmGrid grid grid-cols-4 gap-3">
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
-                <div>
-                    <a href="index.php"><img src="{{ asset('img/filmIcon.jpg') }}" class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
-                </div>
+                @foreach ($films as $film)
+                    <div>
+                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
