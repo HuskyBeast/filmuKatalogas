@@ -1,4 +1,4 @@
-<div class="px-32 py-4">
+<div class="px-32 py-4 bg-gray-100">
     <h2 class="text-lg font-bold">About Me</h2>
     <hr>
     <div class="px-3">

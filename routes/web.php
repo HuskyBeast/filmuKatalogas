@@ -24,3 +24,7 @@ Route::get('/registration', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/profile/library/', function () {
+    return view('profile');
+});

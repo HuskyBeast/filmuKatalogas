@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class profile-about extends Component
+class ProfileAbout extends Component
 {
     /**
      * Create a new component instance.

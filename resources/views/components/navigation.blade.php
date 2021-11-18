@@ -18,7 +18,7 @@
                 </li>
                     @if ($loggedIn)
                     <!-- Navigation of signed in user -->
-                   <li class = 'px-5 items-center text-gray-400'><a href="{{ url('/library') }}">My Library</a></li>
+                   <li class = 'px-5 items-center text-gray-400'><a href="{{ url('/profile/library/') }}">My Library</a></li>
                     <!-- Profile icon leading to profile -->
                     <li class = 'px-5 items-center'><a href="{{ url('/profile/') }}"><img src="{{ asset('img/profileIcon.jpg') }}" class = 'w-16 rounded-full'></a></li>
                     @else
