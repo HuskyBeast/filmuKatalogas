@@ -21,6 +21,10 @@ Route::get('/registration', function () {
     return view('registration');
 });
 
+Route::get('/films', function () {
+    return view('filmsList');
+});
+
 Route::get('/profile', function () {
     return view('profile');
 });

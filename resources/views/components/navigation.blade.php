@@ -8,7 +8,7 @@
                     </a>
                 </li>
                 <li class = 'px-10 items-center'>
-                    <a href="{{ url('/') }}" class = 'text-white'>Browse</a>
+                    <a href="{{ url('/films/') }}" class = 'text-white'>Browse</a>
                 </li>
             </ul>
             <ul class = 'flex justify-center items-center'>
