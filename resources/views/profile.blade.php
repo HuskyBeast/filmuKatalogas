@@ -30,6 +30,10 @@
     <x-profile-about :user="$user"></x-profile-about>
     @elseif ($page == "library")
     <!-- Adds User's library section -->
-    <x-profile-library :user="$user"></x-profile-library>
+        @if ($films)
+        <x-profile-library :user="$user" :films="$films"></x-profile-library>
+        @else
+        <x-profile-library :user="$user"></x-profile-library>
+        @endif
     @endif
 @stop

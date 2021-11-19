@@ -23,7 +23,7 @@ class RegisterController extends Controller
                 $newUser->email = $request->email;
                 $newUser->password = $password;
                 $newUser->save();
-                $request->session()->put('user', $request->user);
+                $request->session()->put('user', $newUser->id);
                 $request->session()->regenerate();
             }
         } else {

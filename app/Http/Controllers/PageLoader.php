@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Film;
 use App\Models\Categorie;
 use App\Models\User;
+use App\Models\UserLibrary;
 use Illuminate\Http\Request;
 
 class PageLoader extends Controller
@@ -34,11 +35,22 @@ class PageLoader extends Controller
         return view('profile', compact('user', 'page'));
     }
     public function profileLibrary(Request $request) {
+        $films = "no films";
         if ($request->session()->get("user")) {
             $user = User::find($request->session()->get("user"));
+            $userLibrary = UserLibrary::find($user->id);
+            if ($userLibrary) {
+                $userLibrary = explode("/", $userLibrary->films);
+                $films = [];
+                foreach ($userLibrary as $film) {
+                    $films[] = Film::find($film);
+                }
+            }
+            
         }
         $page = "library";
-        return view('profile', compact('user', 'page'));
+        return view('profile', compact('user', 'page', 'films'));
+        
     }
     public function film(Request $request) {
         $id = $request->route('id');
