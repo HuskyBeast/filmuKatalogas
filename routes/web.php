@@ -22,9 +22,7 @@ Route::get('/registration', function () {
     return view('registration');
 })->name('registration');
 
-Route::get('/films', function () {
-    return view('filmsList');
-});
+Route::get('/films', [PageLoader::class, 'filmsList']);
 
 Route::post('/register/', [RegisterController::class, 'register'])->name('register');
 Route::post('/login/', [LoginController::class, 'login'])->name('login');

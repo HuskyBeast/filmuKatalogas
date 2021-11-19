@@ -20,4 +20,9 @@ class PageLoader extends Controller
         $films = Film::query()->where('categories', 'LIKE', "%{$id}%")->get();
         return view('filmsByCategory', compact('films', 'category', 'categories'));
     }
+    public function filmsList() {
+        $categories = Categorie::all();
+        $films = Film::all();
+        return view("filmsList", compact('films', 'categories'));
+    }
 }
