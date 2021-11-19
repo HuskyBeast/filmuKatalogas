@@ -40,4 +40,14 @@ class PageLoader extends Controller
         $page = "library";
         return view('profile', compact('user', 'page'));
     }
+    public function film(Request $request) {
+        $id = $request->route('id');
+        $film = Film::find($id);
+        $catString = explode("/", $film->categories);
+        $categories = [];
+        foreach ($catString as $category) {
+            $categories[] = Categorie::find($category);
+        }
+        return view ("film", compact("film", "categories"));
+    }
 }

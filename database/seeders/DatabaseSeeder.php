@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '1.jpg',
             'length' => '2h 22m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=6hB3S9bIaco',
+            'trailer' => 'https://www.youtube.com/embed/6hB3S9bIaco',
             'writers' => 'Stephen King (based on the short novel "Rita Hayworth and the Shawshank Redemption"), Frank Darabont (screenplay)',
             'release_date' => '1994-09-22',
             'categories' => '1/2'
@@ -68,7 +68,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '2.jpg',
             'length' => '2h 55m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=5DO-nDW43Ik',
+            'trailer' => 'https://www.youtube.com/embed/5DO-nDW43Ik',
             'writers' => 'Mario Puzo (screenplay), Francis Ford Coppola (screenplay)',
             'release_date' => '1972-03-24',
             'categories' => '1/2'
@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '3.jpg',
             'length' => '3h 22m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=8PyZCU2vpi8',
+            'trailer' => 'https://www.youtube.com/embed/8PyZCU2vpi8',
             'writers' => 'Mario Puzo (screenplay), Francis Ford Coppola (screenplay)',
             'release_date' => '1974-12-18',
             'categories' => '1/2'
@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '4.jpg',
             'length' => '2h 32m',
             'audience' => 'PG-13',
-            'trailer' => 'https://www.youtube.com/watch?v=EXeTwQWrcwY',
+            'trailer' => 'https://www.youtube.com/embed/EXeTwQWrcwY',
             'writers' => 'Jonathan Nolan (screenplay), Christopher Nolan (screenplay), David S. Goyer (story)',
             'release_date' => '2008-07-18',
             'categories' => '1/2/3'
@@ -104,7 +104,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '5.jpg',
             'length' => '1h 36m',
             'audience' => '',
-            'trailer' => 'https://www.youtube.com/watch?v=_13J_9B5jEk',
+            'trailer' => 'https://www.youtube.com/embed/_13J_9B5jEk',
             'writers' => 'Reginald Rose (story)',
             'release_date' => '1957-4-10',
             'categories' => '1/2'
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '6.jpg',
             'length' => '3h 15m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=gG22XNhtnoY',
+            'trailer' => 'https://www.youtube.com/embed/gG22XNhtnoY',
             'writers' => 'Thomas Keneally (book), Steven Zaillian (screenplay)',
             'release_date' => '1994-02-04',
             'categories' => '1/4/5'
@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '7.jpg',
             'length' => '3h 21m',
             'audience' => 'PG-13',
-            'trailer' => 'https://www.youtube.com/watch?v=r5X-hFf6Bwo',
+            'trailer' => 'https://www.youtube.com/embed/r5X-hFf6Bwo',
             'writers' => 'J.R.R. Tolkien (novel "The Return of the King"), Fran Walsh (screenplay), Philippa Boyens (screenplay)',
             'release_date' => '2003-12-17',
             'categories' => '1/3/6'
@@ -140,7 +140,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '8.jpg',
             'length' => '2h 34m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=s7EdQ4FqbhY',
+            'trailer' => 'https://www.youtube.com/embed/s7EdQ4FqbhY',
             'writers' => 'Quentin Tarantino (stories), Roger Avary (stories)',
             'release_date' => '1994-10-14',
             'categories' => '1/2'
@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '9.jpg',
             'length' => '2h 58m',
             'audience' => 'R',
-            'trailer' => 'https://www.youtube.com/watch?v=WCN5JJY_wiA',
+            'trailer' => 'https://www.youtube.com/embed/WCN5JJY_wiA',
             'writers' => 'Luciano Vincenzoni (story), Sergio Leone (story), Agenore Incrocci (screenplay)',
             'release_date' => '1967-12-26',
             'categories' => '6/7'
@@ -164,7 +164,7 @@ class DatabaseSeeder extends Seeder
             'cover' => '10.jpg',
             'length' => '2h 58m',
             'audience' => 'PG-13',
-            'trailer' => 'https://www.youtube.com/watch?v=V75dMMIW2B4',
+            'trailer' => 'https://www.youtube.com/embed/V75dMMIW2B4',
             'writers' => 'J.R.R. Tolkien (novel "The Fellowship of the Ring"), Fran Walsh (screenplay), Philippa Boyens (screenplay)',
             'release_date' => '2001-12-19',
             'categories' => '1/3/6'

@@ -8,7 +8,7 @@
             <div class='filmGrid grid grid-cols-4 gap-3'>
                 @foreach ($films as $film)
                     <div>
-                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                        <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
                     </div>
                 @endforeach
             </div>
@@ -18,7 +18,7 @@
             <div class="filmGrid grid grid-cols-4 gap-3">
                 @foreach ($films as $film)
                     <div>
-                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                        <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
                     </div>
                 @endforeach
             </div>
@@ -28,7 +28,7 @@
             <div class="filmGrid grid grid-cols-4 gap-3">
                 @foreach ($films as $film)
                     <div>
-                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                        <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
                     </div>
                 @endforeach
             </div>
@@ -38,7 +38,7 @@
             <div class="filmGrid grid grid-cols-4 gap-3">
                 @foreach ($films as $film)
                     <div>
-                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                        <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
                     </div>
                 @endforeach
             </div>

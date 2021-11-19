@@ -7,7 +7,7 @@
             @isset($films)
                 @foreach ($films as $film)
                 <div class="rounded-md bg-blue-800">
-                    <a href="#"><img src='{{ asset("img/$film->cover") }}' class="rounded-t-md w-44 h-60"></a>
+                    <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class="rounded-t-md w-44 h-60"></a>
                     <div class="p-3 flex justify-center">
                         <button class="flex-none py-0.5 px-4 border border-white-300 rounded-full bg-blue-700 text-center text-sm text-white">Add to Library</button>
                     </div>

@@ -34,3 +34,5 @@ Route::get('/profile', [PageLoader::class, "profileAbout"])->name('profile')->mi
 Route::get('/profile/library/', [PageLoader::class, "profileLibrary"])->name('library')->middleware('user');
 
 Route::get('/category/{id}', [PageLoader::class, 'category']);
+
+Route::get("/film/{id}", [PageLoader::class, "film"]);

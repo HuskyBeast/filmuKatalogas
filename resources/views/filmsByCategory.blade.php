@@ -12,7 +12,7 @@
     <div class="grid grid-cols-4 w-1/2 mx-auto pt-5 pb-10">
                 @foreach ($films as $film)
                     <div>
-                        <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
+                        <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'mx-2 rounded-md' width = "180px" height = "280px"></a>
                     </div>
                 @endforeach
     </div>
