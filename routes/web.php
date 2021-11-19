@@ -3,6 +3,7 @@
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PageLoader;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,5 @@ Route::get('/profile/library/', [PageLoader::class, "profileLibrary"])->name('li
 Route::get('/category/{id}', [PageLoader::class, 'category']);
 
 Route::get("/film/{id}", [PageLoader::class, "film"]);
+
+Route::get('/addToLibrary/{id}', [UserController::class, "addToLibrary"]);

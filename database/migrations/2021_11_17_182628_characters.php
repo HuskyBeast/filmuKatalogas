@@ -21,9 +21,6 @@ class Characters extends Migration
             $table->string('picture');
             $table->string('role');
             $table->timestamps();
-            
-            $table->index("film_id");
-            $table->foreign('film_id')->references('id')->on('films')->onDelete('cascade');
         });
     }
 
@@ -34,11 +31,6 @@ class Characters extends Migration
      */
     public function down()
     {
-        Schema::table('characters', function (Blueprint $table) {
-            $table->dropForeign('lists_film_id_foreign');
-            $table->dropIndex('lists_film_id_index');
-            $table->dropColumn('film_id');
-        });
         Schema::dropIfExists('characters');
     }
 }
