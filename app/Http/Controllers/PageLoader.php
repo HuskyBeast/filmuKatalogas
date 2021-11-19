@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Film;
 use App\Models\Categorie;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PageLoader extends Controller
@@ -24,5 +25,19 @@ class PageLoader extends Controller
         $categories = Categorie::all();
         $films = Film::all();
         return view("filmsList", compact('films', 'categories'));
+    }
+    public function profileAbout(Request $request) {
+        if ($request->session()->get("user")) {
+            $user = User::find($request->session()->get("user"));
+        }
+        $page = "about";
+        return view('profile', compact('user', 'page'));
+    }
+    public function profileLibrary(Request $request) {
+        if ($request->session()->get("user")) {
+            $user = User::find($request->session()->get("user"));
+        }
+        $page = "library";
+        return view('profile', compact('user', 'page'));
     }
 }

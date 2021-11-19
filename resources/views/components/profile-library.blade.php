@@ -3,7 +3,7 @@
         <div class='pb-10 mx-auto w-11/12'>
             <div class='p-2 rounded-lg flex flex-wrap bg-white shadow'>
                 <img src="{{ asset('img/searchIconLG.png') }}" width='32px'>
-                <input type="search" class='text-lg w-5/6 px-3' placeholder="Search Username's Library...">
+                <input type="search" class='text-lg w-5/6 px-3' placeholder="Search {{ $user->name }}'s Library...">
             </div>
         </div>
         <div class="flex flex-wrap justify-center gap-5 mx-auto w-11/12">
