@@ -17,7 +17,7 @@ class LoginController extends Controller
         if (User::where('name', $request->user)->first()) {
             $user = User::where('name', $request->user)->first();
             if (Hash::check($request->pass, $user->password)) {
-                $request->session()->put('user', $request->user);
+                $request->session()->put('user', $user->id);
                 $request->session()->regenerate();
             }
         } else {
