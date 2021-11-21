@@ -1,5 +1,5 @@
-<div class = 'px-60 flex lg:flex-nowrap md:flex-wrap justify-between'>  
-    <div class="py-10 mx-auto w-4/6">
+<div class = 'px-16 flex lg:flex-nowrap md:flex-wrap justify-between w-4/5 mx-auto'>  
+    <div class="pb-10 mx-auto w-4/6">
         <!-- Film search component goes here -->
         {{ $filmSearch }}
         <!-- Film search component goes here -->

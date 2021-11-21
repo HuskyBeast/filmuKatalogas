@@ -1,4 +1,4 @@
-<div class = 'xl:px-auto lg:px-24 px-16 flex lg:flex-nowrap flex-wrap lg:justify-between justify-center'>  
+<div class = 'xl:px-auto lg:px-24 px-16 flex lg:flex-nowrap flex-wrap lg:justify-between justify-center w-3/4 mx-auto'>  
     <div class = 'mx-2 px-2 justify-center'>
         <!-- Film search component goes here -->
         {{ $filmSearch }}
@@ -47,7 +47,7 @@
         </div>
     </div>
     
-    <div class = 'lg:order-last order-first lg:flex-1 w-auto'>
+    <div class = 'lg:order-last order-first lg:flex-1 w-1/4'>
         <!-- Film categories component goes here -->
         {{ $categories }}
         <!-- Film categories component goes here -->
