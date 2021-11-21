@@ -1,24 +1,25 @@
-<div class = 'my-10 p-5 rounded-lg bg-white shadow'>
+<div class = 'sm:order-first my-10 lg:ml-5 pt-3 px-5 rounded-lg bg-white shadow'>
     <div>
         <h3 class = 'font-bold uppercase'>My favorite categories</h3>
         <hr class = 'my-2'>
         <p>Favoriting categories will improve your recommendations.</p>
     </div>
-    <div class = 'my-10'>
+    <div class = 'py-8'>
         <h3 class = 'font-bold uppercase'>Categories</h3>
         <hr class = 'my-2'>
-        @foreach ($categories as $category)
-            <a class="category p-2 m-2" href='{{ url("/category/$category->id") }}'>{{ $category->name }}</a>
-        @endforeach
+        <div class = "lx:pr-8 lg:grid xl:grid-cols-2 lg:grid-cols-1">
+            @foreach ($categories as $category)
+            <a class="category lg:text-left md:text-center px-2 w-min rounded-full" href='{{ url("/category/$category->id") }}'>{{ $category->name }}</a>
+            @endforeach
+        </div>
     </div>
 </div>
 <style>
     .category:hover {
         color: blue;
         background: lightblue;
-        border-radius: 10%;
     }
     .category {
-        line-height: 3rem;
+        line-height: 2rem;
     }
 </style>
