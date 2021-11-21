@@ -5,7 +5,7 @@
 @section('content')
     <div class="xl:w-3/4 lg:w-4/5 md:w-11/12 film mx-auto p-16 my-16 bg-blue-50 rounded-xl grid md:grid-cols-3 md:grid-rows-1 sm:grid-cols-1 sm:grid-rows-2 md:gap-8 sm:gap-0">
         <div>
-            <img src='{{ asset("img/$film->cover") }}' class="w-full md:h-1/2 sm:h-1/3 mx-auto">
+            <img src='{{ asset("storage/films/covers/$film->cover") }}' class="w-full md:h-1/2 sm:h-1/3 mx-auto">
             <h1 class="text-center font-bold text-xl py-3">{{ $film->name }}</h1>
             <p><b>Rating:</b> <i>{{ $film->audience }}</i></p>
             <p><b>Release Date:</b> <i>{{ $film->release_date }}</i></p>

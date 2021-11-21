@@ -21,19 +21,17 @@
     </div>    
     <hr class="bg-gray-400 border-0 h-1">
     <div class="flex flex-wrap ml-44">
-        <a href="{{ url('/profile/') }}" class="px-10 py-3 border-l-2 border-r border-gray-400">About</a>
-        <a href="{{ url('/profile/library/') }}" class="px-10 py-3 border-l border-r-2 border-gray-400">Library</a>
+        <a href="{{ url('/profile/') }}" class="px-10 py-3 border-l-2 border-r border-gray-400">Settings</a>
     </div>
     <hr class="bg-gray-200 border-0 h-px">
-    @if ($page == "about")
-    <!-- Adds User's about section -->
-    <x-profile-about :user="$user"></x-profile-about>
-    @elseif ($page == "library")
-    <!-- Adds User's library section -->
-        @if ($films)
-        <x-profile-library :user="$user" :films="$films"></x-profile-library>
-        @else
-        <x-profile-library :user="$user"></x-profile-library>
-        @endif
-    @endif
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 px-64">
+        <!-- Adds User's about section -->
+        <div class="pt-10">
+            <x-profile-about :user="$user"></x-profile-about>
+        </div>
+        <div class="lg:col-span-2 md:col-span-1">
+            <!-- Adds User's library section -->
+            <x-profile-library :user="$user" :films="$films"></x-profile-library>
+        </div>
+    </div>
 @stop
