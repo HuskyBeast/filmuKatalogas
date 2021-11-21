@@ -9,7 +9,7 @@
                 <div class='filmGrid grid md:grid-cols-4 grid-cols-2 md:gap-3 gap-5 sm:place-items-center'>
                     @foreach ($films as $film)
                         <div>
-                            <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
+                            <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
                         </div>
                     @endforeach
                 </div>
@@ -17,9 +17,9 @@
             <div class = 'my-10'>
                 <h3 class = 'my-2 text-lg font-bold'>Most Popular Films</h3>
                 <div class="filmGrid grid md:grid-cols-4 grid-cols-2 md:gap-3 gap-5 sm:place-items-center">
-                    @foreach ($films as $film)
+                    @foreach ($films2 as $film)
                         <div>
-                            <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
+                            <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
                         </div>
                     @endforeach
                 </div>
@@ -27,9 +27,9 @@
             <div class = 'my-10'>
                 <h3 class = 'my-2 text-lg font-bold'>Top Rated Films</h3>
                 <div class="filmGrid grid md:grid-cols-4 grid-cols-2 md:gap-3 gap-5 sm:place-items-center">
-                    @foreach ($films as $film)
+                    @foreach ($films3 as $film)
                         <div>
-                            <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
+                            <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
                         </div>
                     @endforeach
                 </div>
@@ -37,9 +37,9 @@
             <div class = 'my-10'>
                 <h3 class = 'my-2 text-lg font-bold'>Top Upcoming Films</h3>
                 <div class="filmGrid grid md:grid-cols-4 grid-cols-2 md:gap-3 gap-5 sm:place-items-center">
-                    @foreach ($films as $film)
+                    @foreach ($films4 as $film)
                         <div>
-                            <a href="index.php"><img src='{{ asset("img/$loop->iteration.jpg") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
+                            <a href='{{ url("/film/$film->id") }}'><img src='{{ asset("img/$film->cover") }}' class = 'xl:w-52 xl:h-80 md:w-48 md:h-60 w-44 h-56 rounded-md'></a>
                         </div>
                     @endforeach
                 </div>

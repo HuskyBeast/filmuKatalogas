@@ -39,3 +39,5 @@ Route::get('/category/{id}', [PageLoader::class, 'category']);
 Route::get("/film/{id}", [PageLoader::class, "film"]);
 
 Route::get('/addToLibrary/{id}', [UserController::class, "addToLibrary"]);
+
+Route::post("/filmSearch/", [PageLoader::class, "filmSearch"])->name('filmSearch');
