@@ -75,7 +75,7 @@
         </div>
     </div>
     
-    <div>
+    <div class="lg:flex-1 md:flex-none lg:order-none md:order-first">
         <!-- Film categories component goes here -->
         {{ $categories }}
         <!-- Film categories component goes here -->
