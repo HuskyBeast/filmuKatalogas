@@ -51,3 +51,4 @@ Route::post('/editCategory/', [PageLoader::class, "editCategoryPage"]);
 Route::post('/edit/category/', [AdminController::class, "editCategory"]);
 Route::post('/editFilm/', [PageLoader::class, "editFilmPage"]);
 Route::post('/edit/film/', [AdminController::class, "editFilm"]);
+Route::post('/user/changeSettings/', [UserController::class, "updateUser"]);

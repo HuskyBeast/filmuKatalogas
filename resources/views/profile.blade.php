@@ -20,6 +20,7 @@
         </div>
     </div>    
     <hr class="bg-gray-400 border-0 h-1">
+    <div class="hidden">
     <div class="flex flex-wrap ml-44">
         <a href="{{ url('/profile/') }}" class="px-10 py-3 border-l-2 border-r border-gray-400">Settings</a>
     </div>
@@ -33,5 +34,9 @@
             <!-- Adds User's library section -->
             <x-profile-library :user="$user" :films="$films"></x-profile-library>
         </div>
+    </div>
+    </div>
+    <div class="text-center"> 
+        <x-profile-settings></x-profile-settings>
     </div>
 @stop
