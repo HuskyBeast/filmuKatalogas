@@ -99,6 +99,8 @@ class PageLoader extends Controller
     public function editFilmPage(Request $request) {
         $id = $request->film;
         $film = Film::find($id);
-        return view("editFilm", compact("film"));
+        $categoriesCurrent = explode("/", $film->categories);
+        $categories = Categorie::all();
+        return view("editFilm", compact("film", "categoriesCurrent", "categories"));
     }
 }

@@ -4,27 +4,12 @@
 
 @section('content')
 <div class="w-1/2 mx-auto my-16 p-5">
-    <form action="{{ url('deleteFilm') }}" method="POST">
-        @csrf
-        <h1 class="text-3xl text-red-500 text-center">Remove a film</h1>
-        <select class="text-center mx-auto block my-5" name="id">
-            @foreach ($films as $film)
-            <option value="{{ $film->id }}">{{ $film->name }}</option>
-            @endforeach
-            <input type="submit" value="Delete film" class='mx-auto block bg-white p-2 border-2 text-red-500 border-red-500'>
-        </select>
-    </form>
-    <form action="{{ url('deleteCategory') }}" method="POST">
-        @csrf
-        <h1 class="text-3xl text-red-500 text-center">Remove a category</h1>
-        <select class="text-center mx-auto block my-5" name="id">
-            @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
-            @endforeach
-            <input type="submit" value="Delete category" class='mx-auto block bg-white p-2 border-2 text-red-500 border-red-500'>
-        </select>
-    </form>
-    <form action="{{ url('addCategory') }}" method="POST" class="text-center">
+    <div class="text-center pb-5">
+    <button id="buttonCategories" onclick="showCategories();" class="mx-auto bg-white p-2 border-2 text-blue-500 border-blue-500">Categories</button>
+    <button id="buttonFilms" onclick="showFilms();" class="mx-auto bg-white bg-blue-200 p-2 border-2 text-blue-500 border-blue-500">Films</button>
+    </div>
+    <div id="categories" style="display: none;">
+    <form action="{{ url('addCategory') }}" method="POST" class="text-center py-5">
         @csrf
         <h1 class="text-3xl text-green-500 text-center">Add a category</h1>
         <label for="name">
@@ -41,7 +26,32 @@
         </label>
         <input type="submit" value="Add category" class='mx-auto block bg-white p-2 border-2 text-green-500 border-green-500'>
     </form>
-    <form action="{{ url('addFilm') }}" method="POST" class="text-center" enctype="multipart/form-data">
+    <form action="{{ url('deleteCategory') }}" method="POST">
+        @csrf
+        <h1 class="text-3xl text-red-500 text-center">Remove a category</h1>
+        <select class="text-center mx-auto block my-5" name="id">
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+            <input type="submit" value="Delete category" class='mx-auto block bg-white p-2 border-2 text-red-500 border-red-500'>
+        </select>
+    </form>
+    <form action="{{ url('/editCategory/') }}" class="text-center py-5" method="POST">
+        @csrf
+        <h1 class="text-blue-500 text-3xl">Edit a Category</h1>
+        <br>
+        <select name="category" id="category" required>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Edit Category" class="text-blue-500 border-2 border-blue-500 p-2">
+    </form>
+    </div>
+    <div id="films">
+    <form action="{{ url('addFilm') }}" method="POST" class="text-center py-5" enctype="multipart/form-data">
         @csrf
         <h1 class="text-3xl text-green-500 text-center">Add a Film</h1>
         <label for="name">
@@ -125,20 +135,17 @@
         
         <input type="submit" value="Add film" class='mx-auto block bg-white p-2 border-2 text-green-500 border-green-500'>
     </form>
-    <form action="{{ url('/editCategory/') }}" class="text-center" method="POST">
+    <form action="{{ url('deleteFilm') }}" method="POST" class="py-5">
         @csrf
-        <h1 class="text-blue-500 text-3xl">Edit a Category</h1>
-        <br>
-        <select name="category" id="category" required>
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+        <h1 class="text-3xl text-red-500 text-center">Remove a film</h1>
+        <select class="text-center mx-auto block my-5" name="id">
+            @foreach ($films as $film)
+            <option value="{{ $film->id }}">{{ $film->name }}</option>
             @endforeach
+            <input type="submit" value="Delete film" class='mx-auto block bg-white p-2 border-2 text-red-500 border-red-500'>
         </select>
-        <br>
-        <br>
-        <input type="submit" value="Edit Category" class="text-blue-500 border-2 border-blue-500 p-2">
     </form>
-    <form action="{{ url('/editFilm/') }}" class="text-center" method="POST">
+    <form action="{{ url('/editFilm/') }}" class="text-center py-5" method="POST">
         @csrf
         <h1 class="text-blue-500 text-3xl">Edit a Film</h1>
         <br>
@@ -151,5 +158,30 @@
         <br>
         <input type="submit" value="Edit Film" class="text-blue-500 border-2 border-blue-500 p-2">
     </form>
+    </div>
 </div>
+<script>
+    function showCategories() {
+        $categories = document.getElementById("categories");
+        $films = document.getElementById("films");
+        $buttonCategories = document.getElementById("buttonCategories");
+        $buttonFilms = document.getElementById("buttonFilms");
+
+        $categories.style.display = "block";
+        $films.style.display = "none";
+        $buttonCategories.classList.add("bg-blue-200");
+        $buttonFilms.classList.remove("bg-blue-200");
+    }
+    function showFilms() {
+        $categories = document.getElementById("categories");
+        $films = document.getElementById("films");
+        $buttonCategories = document.getElementById("buttonCategories");
+        $buttonFilms = document.getElementById("buttonFilms")
+
+        $categories.style.display = "none";
+        $films.style.display = "block";
+        $buttonCategories.classList.remove("bg-blue-200");
+        $buttonFilms.classList.add("bg-blue-200");
+    }
+</script>
 @stop

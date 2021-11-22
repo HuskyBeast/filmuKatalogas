@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categorie;
 use App\Models\Film;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -93,5 +94,51 @@ class AdminController extends Controller
         $category->save();
 
         return redirect('/admin/');
+    }
+    public function editFilm(Request $request) {
+        $validated = $request->validate([
+            "id" => "required",
+            "name" => "required",
+            "release_date" => "required",
+            "length" => "required",
+            "writers" => "required",
+            "trailer" => "required",
+            "categories" => "required"
+        ]);
+            $id = $request->id;
+            $film = Film::find($id);
+            $name = $request->name;
+            $description = $request->description;
+            $release_date = $request->release_date;
+            $length = $request->length;
+            $writers = $request->writers;
+            $categories = $request->categories;
+            $trailer = $request->trailer;
+            $cover = $film->cover;
+            $audience = "";
+            if ($request->audience) {
+                $audience = $request->audience;
+            }
+            if (is_array($categories)) {
+                $categories = implode("/", $categories);
+            }
+            if ($request->hasFile('cover') && $request->cover) {
+                Storage::delete('public/films/covers/' . $film->cover);
+                $cover = $request->file('cover')->store('public/films/covers');
+                $cover = explode("/", $cover);
+                $cover = end($cover);
+            }
+            $film = Film::find($id);
+            $film->name = $name;
+            $film->description = $description;
+            $film->release_date = $release_date;
+            $film->length = $length;
+            $film->writers = $writers;
+            $film->categories = $categories;
+            $film->audience = $audience;
+            $film->trailer = $trailer;
+            $film->cover = $cover;
+            $film->save();
+            return redirect('/admin/');
     }
 }
